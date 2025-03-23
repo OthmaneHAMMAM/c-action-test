@@ -5,8 +5,13 @@ name: My Test Workflow
 on: [push]
 
 #Jobs run in paraller by default,each runs steps in sequence
-Jobs:
-    say-hello:
-        runs-on: ubuntu-latest
+#Jobs:
+#    say-hello:
+#        runs-on: ubuntu-latest
+#        steps:
+#            - run: echo "Hello, Github Actions!"
+
+jobs:
+    say_hello:
         steps:
-            - run: echo "Hello, Github Actions!"
+          - run: echo "Hello, Github Actions!"
