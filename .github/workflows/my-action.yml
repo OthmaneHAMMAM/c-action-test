@@ -6,8 +6,9 @@ on: [push]
 
 #Jobs run in paraller by default,each runs steps in sequence
 Jobs:
+
     #Job to print something out
-    Say-hello:
+    say-hello:
         runs-on: ubuntu-latest
         steps:
           - run: echo "Hello, Github Actions!"
