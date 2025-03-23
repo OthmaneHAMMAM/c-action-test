@@ -16,3 +16,22 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - run: echo "Hello, Github Actions!"
+          
+    needs: [say_hello]
+    runs-on: ubuntu-latest
+    steps:
+        
+        #Use github.com/actions/checkout tocheck this repo
+      - name: Check out this repo
+        uses: actions/checkout@v3
+        
+        #install necessary packages
+      - name: Install dependencies
+        run: sudo apt get install -y build-essential python3
+        
+        #see where we are in the VM
+      - run: pwd
+  
+        #Run our test
+      - name: Run test
+        run: python3 test.py
