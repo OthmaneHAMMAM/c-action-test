@@ -13,5 +13,6 @@ on: [push]
 
 jobs:
     say_hello:
+        runs-on: ubuntu-latest
         steps:
           - run: echo "Hello, Github Actions!"
